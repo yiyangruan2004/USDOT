@@ -1,0 +1,77 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "design_1_spi_decoder_0_0",
+    "cell_name": "spi_decoder_0",
+    "component_reference": "xilinx.com:module_ref:spi_decoder:1.0",
+    "ip_revision": "1",
+    "gen_directory": "../../../../../../FPGA.gen/sources_1/bd/design_1/ip/design_1_spi_decoder_0_0",
+    "parameters": {
+      "component_parameters": {
+        "Component_Name": [ { "value": "design_1_spi_decoder_0_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "artix7", "resolve_type": "generated", "usage": "all" } ],
+        "BASE_BOARD_PART": [ { "value": "", "resolve_type": "generated", "usage": "all" } ],
+        "BOARD_CONNECTIONS": [ { "value": "", "resolve_type": "generated", "usage": "all" } ],
+        "DEVICE": [ { "value": "xc7a35t", "resolve_type": "generated", "usage": "all" } ],
+        "PACKAGE": [ { "value": "cpg236", "resolve_type": "generated", "usage": "all" } ],
+        "PREFHDL": [ { "value": "VERILOG", "resolve_type": "generated", "usage": "all" } ],
+        "SILICON_REVISION": [ { "value": "", "resolve_type": "generated", "usage": "all" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED", "resolve_type": "generated", "usage": "all" } ],
+        "SPEEDGRADE": [ { "value": "-1", "resolve_type": "generated", "usage": "all" } ],
+        "STATIC_POWER": [ { "value": "", "resolve_type": "generated", "usage": "all" } ],
+        "TEMPERATURE_GRADE": [ { "value": "", "resolve_type": "generated", "usage": "all" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "1" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../FPGA.gen/sources_1/bd/design_1/ip/design_1_spi_decoder_0_0" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2025.2" } ],
+        "SYNTHESISFLOW": [ { "value": "OOC_HIERARCHICAL" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "byte_done": [ { "direction": "in" } ],
+        "rx_shift": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
+        "CH1": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
+        "CH2": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
+        "CH3": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
+        "CH4": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
+        "CH5": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
+        "CH6": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
+        "CH7": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
+        "CH8": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
+        "CH9": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
+        "CH10": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
+        "CH11": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
+        "CH12": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
+        "CH13": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
+        "CH14": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
+        "CH15": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
+        "tx": [ { "direction": "out", "size_left": "7", "size_right": "0" } ],
+        "CH_en": [ { "direction": "out", "size_left": "14", "size_right": "0" } ],
+        "CH_rst": [ { "direction": "out", "size_left": "14", "size_right": "0" } ]
+      },
+      "interfaces": {
+        "CH_rst": {
+          "vlnv": "xilinx.com:signal:reset:1.0",
+          "abstraction_type": "xilinx.com:signal:reset_rtl:1.0",
+          "mode": "master",
+          "parameters": {
+            "POLARITY": [ { "value": "ACTIVE_LOW", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "RST": [ { "physical_name": "CH_rst" } ]
+          }
+        }
+      }
+    }
+  },
+  "checksum": "0cfa061a"
+}

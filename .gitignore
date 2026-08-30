@@ -1,0 +1,65 @@
+# Documentation
+docs/
+
+# Qt and CMake build output
+UI/build/
+build/
+build-*/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+Testing/
+compile_commands.json
+.ninja_deps
+.ninja_log
+*.ninja
+
+# Qt Creator
+*.pro.user*
+CMakeLists.txt.user*
+.qtc_clangd/
+.qtcreator/
+
+# PlatformIO
+.pio/
+.pioenvs/
+.piolibdeps/
+.clang_complete
+.gcc-flags.json
+
+# Vivado generated files and directories
+.Xil/
+*.cache/
+*.gen/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.jou
+*.log
+*.str
+*.dmp
+*.tmp
+*.wdb
+webtalk*.xml
+
+# Local environment and editor settings
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+*.user
+*.user.*
+*.suo
+*.VC.db
+*.swp
+*.swo
+*~
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+Desktop.ini

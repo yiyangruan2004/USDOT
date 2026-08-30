@@ -1,0 +1,1295 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x268464E65D74553A",
+      "device": "xc7a35tcpg236-1",
+      "gen_directory": "../../../../FPGA.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2025.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "spi_slave_0": "",
+      "spi_decoder_0": "",
+      "fifo_generator_0": "",
+      "fifo_generator_1": "",
+      "slice_0": "",
+      "slice_1": "",
+      "fifo_generator_2": "",
+      "fifo_generator_3": "",
+      "fifo_generator_4": "",
+      "fifo_generator_5": "",
+      "fifo_generator_6": "",
+      "fifo_generator_7": "",
+      "fifo_generator_8": "",
+      "fifo_generator_9": "",
+      "fifo_generator_10": "",
+      "fifo_generator_11": "",
+      "fifo_generator_12": "",
+      "fifo_generator_13": "",
+      "fifo_generator_14": "",
+      "LTC2326_V2_0": ""
+    },
+    "ports": {
+      "mosi": {
+        "direction": "I"
+      },
+      "cs": {
+        "direction": "I"
+      },
+      "miso": {
+        "type": "data",
+        "direction": "O",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "sclk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_sclk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "10000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "sysclk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_sysclk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "12000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "dout": {
+        "direction": "I"
+      },
+      "busy": {
+        "direction": "I"
+      },
+      "sck": {
+        "direction": "O"
+      },
+      "cnv": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "spi_slave_0": {
+        "vlnv": "xilinx.com:module_ref:spi_slave:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_spi_slave_0_0",
+        "xci_path": "ip\\design_1_spi_slave_0_0\\design_1_spi_slave_0_0.xci",
+        "inst_hier_path": "spi_slave_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "spi_slave",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sclk": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "10000000",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_sclk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "mosi": {
+            "direction": "I"
+          },
+          "cs": {
+            "direction": "I"
+          },
+          "rx_shift": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "miso": {
+            "direction": "O"
+          },
+          "byte_done": {
+            "direction": "O"
+          },
+          "tx": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "spi_decoder_0": {
+        "vlnv": "xilinx.com:module_ref:spi_decoder:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_spi_decoder_0_0",
+        "xci_path": "ip\\design_1_spi_decoder_0_0\\design_1_spi_decoder_0_0.xci",
+        "inst_hier_path": "spi_decoder_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "spi_decoder",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "byte_done": {
+            "direction": "I"
+          },
+          "rx_shift": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "CH1": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "CH2": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "CH3": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "CH4": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "CH5": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "CH6": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "CH7": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "CH8": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "CH9": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "CH10": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "CH11": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "CH12": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "CH13": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "CH14": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "CH15": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "tx": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "CH_en": {
+            "direction": "O",
+            "left": "14",
+            "right": "0"
+          },
+          "CH_rst": {
+            "type": "rst",
+            "direction": "O",
+            "left": "14",
+            "right": "0"
+          }
+        }
+      },
+      "fifo_generator_0": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "ip_revision": "14",
+        "xci_name": "design_1_fifo_generator_0_0",
+        "xci_path": "ip\\design_1_fifo_generator_0_0\\design_1_fifo_generator_0_0.xci",
+        "inst_hier_path": "fifo_generator_0",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "Enable_Safety_Circuit": {
+            "value": "true"
+          },
+          "Fifo_Implementation": {
+            "value": "Independent_Clocks_Block_RAM"
+          },
+          "Full_Flags_Reset_Value": {
+            "value": "1"
+          },
+          "Input_Data_Width": {
+            "value": "16"
+          },
+          "Input_Depth": {
+            "value": "8192"
+          },
+          "Output_Data_Width": {
+            "value": "8"
+          },
+          "Performance_Options": {
+            "value": "First_Word_Fall_Through"
+          }
+        }
+      },
+      "fifo_generator_1": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "ip_revision": "14",
+        "xci_name": "design_1_fifo_generator_1_0",
+        "xci_path": "ip\\design_1_fifo_generator_1_0\\design_1_fifo_generator_1_0.xci",
+        "inst_hier_path": "fifo_generator_1",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "Enable_Safety_Circuit": {
+            "value": "true"
+          },
+          "Fifo_Implementation": {
+            "value": "Independent_Clocks_Block_RAM"
+          },
+          "Full_Flags_Reset_Value": {
+            "value": "1"
+          },
+          "Input_Data_Width": {
+            "value": "16"
+          },
+          "Input_Depth": {
+            "value": "8192"
+          },
+          "Performance_Options": {
+            "value": "First_Word_Fall_Through"
+          }
+        }
+      },
+      "slice_0": {
+        "vlnv": "xilinx.com:module_ref:slice:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_slice_0_1",
+        "xci_path": "ip\\design_1_slice_0_1\\design_1_slice_0_1.xci",
+        "inst_hier_path": "slice_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "slice",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Din": {
+            "direction": "I",
+            "left": "14",
+            "right": "0"
+          },
+          "D0": {
+            "direction": "O"
+          },
+          "D1": {
+            "direction": "O"
+          },
+          "D2": {
+            "direction": "O"
+          },
+          "D3": {
+            "direction": "O"
+          },
+          "D4": {
+            "direction": "O"
+          },
+          "D5": {
+            "direction": "O"
+          },
+          "D6": {
+            "direction": "O"
+          },
+          "D7": {
+            "direction": "O"
+          },
+          "D8": {
+            "direction": "O"
+          },
+          "D9": {
+            "direction": "O"
+          },
+          "D10": {
+            "direction": "O"
+          },
+          "D11": {
+            "direction": "O"
+          },
+          "D12": {
+            "direction": "O"
+          },
+          "D13": {
+            "direction": "O"
+          },
+          "D14": {
+            "direction": "O"
+          }
+        }
+      },
+      "slice_1": {
+        "vlnv": "xilinx.com:module_ref:slice:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_slice_0_2",
+        "xci_path": "ip\\design_1_slice_0_2\\design_1_slice_0_2.xci",
+        "inst_hier_path": "slice_1",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "slice",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Din": {
+            "direction": "I",
+            "left": "14",
+            "right": "0",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "D0": {
+            "direction": "O"
+          },
+          "D1": {
+            "direction": "O"
+          },
+          "D2": {
+            "direction": "O"
+          },
+          "D3": {
+            "direction": "O"
+          },
+          "D4": {
+            "direction": "O"
+          },
+          "D5": {
+            "direction": "O"
+          },
+          "D6": {
+            "direction": "O"
+          },
+          "D7": {
+            "direction": "O"
+          },
+          "D8": {
+            "direction": "O"
+          },
+          "D9": {
+            "direction": "O"
+          },
+          "D10": {
+            "direction": "O"
+          },
+          "D11": {
+            "direction": "O"
+          },
+          "D12": {
+            "direction": "O"
+          },
+          "D13": {
+            "direction": "O"
+          },
+          "D14": {
+            "direction": "O"
+          }
+        }
+      },
+      "fifo_generator_2": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "ip_revision": "14",
+        "xci_name": "design_1_fifo_generator_1_1",
+        "xci_path": "ip\\design_1_fifo_generator_1_1\\design_1_fifo_generator_1_1.xci",
+        "inst_hier_path": "fifo_generator_2",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "Enable_Safety_Circuit": {
+            "value": "true"
+          },
+          "Fifo_Implementation": {
+            "value": "Independent_Clocks_Block_RAM"
+          },
+          "Full_Flags_Reset_Value": {
+            "value": "1"
+          },
+          "Input_Data_Width": {
+            "value": "8"
+          },
+          "Input_Depth": {
+            "value": "8192"
+          },
+          "Performance_Options": {
+            "value": "First_Word_Fall_Through"
+          }
+        }
+      },
+      "fifo_generator_3": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "ip_revision": "14",
+        "xci_name": "design_1_fifo_generator_1_10",
+        "xci_path": "ip\\design_1_fifo_generator_1_10\\design_1_fifo_generator_1_10.xci",
+        "inst_hier_path": "fifo_generator_3",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "Enable_Safety_Circuit": {
+            "value": "true"
+          },
+          "Fifo_Implementation": {
+            "value": "Independent_Clocks_Block_RAM"
+          },
+          "Full_Flags_Reset_Value": {
+            "value": "1"
+          },
+          "Input_Data_Width": {
+            "value": "8"
+          },
+          "Input_Depth": {
+            "value": "8192"
+          },
+          "Performance_Options": {
+            "value": "First_Word_Fall_Through"
+          }
+        }
+      },
+      "fifo_generator_4": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "ip_revision": "14",
+        "xci_name": "design_1_fifo_generator_1_11",
+        "xci_path": "ip\\design_1_fifo_generator_1_11\\design_1_fifo_generator_1_11.xci",
+        "inst_hier_path": "fifo_generator_4",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "Enable_Safety_Circuit": {
+            "value": "true"
+          },
+          "Fifo_Implementation": {
+            "value": "Independent_Clocks_Block_RAM"
+          },
+          "Full_Flags_Reset_Value": {
+            "value": "1"
+          },
+          "Input_Data_Width": {
+            "value": "8"
+          },
+          "Input_Depth": {
+            "value": "8192"
+          },
+          "Performance_Options": {
+            "value": "First_Word_Fall_Through"
+          }
+        }
+      },
+      "fifo_generator_5": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "ip_revision": "14",
+        "xci_name": "design_1_fifo_generator_1_12",
+        "xci_path": "ip\\design_1_fifo_generator_1_12\\design_1_fifo_generator_1_12.xci",
+        "inst_hier_path": "fifo_generator_5",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "Enable_Safety_Circuit": {
+            "value": "true"
+          },
+          "Fifo_Implementation": {
+            "value": "Independent_Clocks_Block_RAM"
+          },
+          "Full_Flags_Reset_Value": {
+            "value": "1"
+          },
+          "Input_Data_Width": {
+            "value": "8"
+          },
+          "Input_Depth": {
+            "value": "8192"
+          },
+          "Performance_Options": {
+            "value": "First_Word_Fall_Through"
+          }
+        }
+      },
+      "fifo_generator_6": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "ip_revision": "14",
+        "xci_name": "design_1_fifo_generator_1_13",
+        "xci_path": "ip\\design_1_fifo_generator_1_13\\design_1_fifo_generator_1_13.xci",
+        "inst_hier_path": "fifo_generator_6",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "Enable_Safety_Circuit": {
+            "value": "true"
+          },
+          "Fifo_Implementation": {
+            "value": "Independent_Clocks_Block_RAM"
+          },
+          "Full_Flags_Reset_Value": {
+            "value": "1"
+          },
+          "Input_Data_Width": {
+            "value": "8"
+          },
+          "Input_Depth": {
+            "value": "8192"
+          },
+          "Performance_Options": {
+            "value": "First_Word_Fall_Through"
+          }
+        }
+      },
+      "fifo_generator_7": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "ip_revision": "14",
+        "xci_name": "design_1_fifo_generator_1_14",
+        "xci_path": "ip\\design_1_fifo_generator_1_14\\design_1_fifo_generator_1_14.xci",
+        "inst_hier_path": "fifo_generator_7",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "Enable_Safety_Circuit": {
+            "value": "true"
+          },
+          "Fifo_Implementation": {
+            "value": "Independent_Clocks_Block_RAM"
+          },
+          "Full_Flags_Reset_Value": {
+            "value": "1"
+          },
+          "Input_Data_Width": {
+            "value": "8"
+          },
+          "Input_Depth": {
+            "value": "8192"
+          },
+          "Performance_Options": {
+            "value": "First_Word_Fall_Through"
+          }
+        }
+      },
+      "fifo_generator_8": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "ip_revision": "14",
+        "xci_name": "design_1_fifo_generator_1_15",
+        "xci_path": "ip\\design_1_fifo_generator_1_15\\design_1_fifo_generator_1_15.xci",
+        "inst_hier_path": "fifo_generator_8",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "Enable_Safety_Circuit": {
+            "value": "true"
+          },
+          "Fifo_Implementation": {
+            "value": "Independent_Clocks_Block_RAM"
+          },
+          "Full_Flags_Reset_Value": {
+            "value": "1"
+          },
+          "Input_Data_Width": {
+            "value": "8"
+          },
+          "Input_Depth": {
+            "value": "8192"
+          },
+          "Performance_Options": {
+            "value": "First_Word_Fall_Through"
+          }
+        }
+      },
+      "fifo_generator_9": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "ip_revision": "14",
+        "xci_name": "design_1_fifo_generator_1_16",
+        "xci_path": "ip\\design_1_fifo_generator_1_16\\design_1_fifo_generator_1_16.xci",
+        "inst_hier_path": "fifo_generator_9",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "Enable_Safety_Circuit": {
+            "value": "true"
+          },
+          "Fifo_Implementation": {
+            "value": "Independent_Clocks_Block_RAM"
+          },
+          "Full_Flags_Reset_Value": {
+            "value": "1"
+          },
+          "Input_Data_Width": {
+            "value": "8"
+          },
+          "Input_Depth": {
+            "value": "8192"
+          },
+          "Performance_Options": {
+            "value": "First_Word_Fall_Through"
+          }
+        }
+      },
+      "fifo_generator_10": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "ip_revision": "14",
+        "xci_name": "design_1_fifo_generator_1_17",
+        "xci_path": "ip\\design_1_fifo_generator_1_17\\design_1_fifo_generator_1_17.xci",
+        "inst_hier_path": "fifo_generator_10",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "Enable_Safety_Circuit": {
+            "value": "true"
+          },
+          "Fifo_Implementation": {
+            "value": "Independent_Clocks_Block_RAM"
+          },
+          "Full_Flags_Reset_Value": {
+            "value": "1"
+          },
+          "Input_Data_Width": {
+            "value": "8"
+          },
+          "Input_Depth": {
+            "value": "8192"
+          },
+          "Performance_Options": {
+            "value": "First_Word_Fall_Through"
+          }
+        }
+      },
+      "fifo_generator_11": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "ip_revision": "14",
+        "xci_name": "design_1_fifo_generator_1_18",
+        "xci_path": "ip\\design_1_fifo_generator_1_18\\design_1_fifo_generator_1_18.xci",
+        "inst_hier_path": "fifo_generator_11",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "Enable_Safety_Circuit": {
+            "value": "true"
+          },
+          "Fifo_Implementation": {
+            "value": "Independent_Clocks_Block_RAM"
+          },
+          "Full_Flags_Reset_Value": {
+            "value": "1"
+          },
+          "Input_Data_Width": {
+            "value": "8"
+          },
+          "Input_Depth": {
+            "value": "8192"
+          },
+          "Performance_Options": {
+            "value": "First_Word_Fall_Through"
+          }
+        }
+      },
+      "fifo_generator_12": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "ip_revision": "14",
+        "xci_name": "design_1_fifo_generator_1_19",
+        "xci_path": "ip\\design_1_fifo_generator_1_19\\design_1_fifo_generator_1_19.xci",
+        "inst_hier_path": "fifo_generator_12",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "Enable_Safety_Circuit": {
+            "value": "true"
+          },
+          "Fifo_Implementation": {
+            "value": "Independent_Clocks_Block_RAM"
+          },
+          "Full_Flags_Reset_Value": {
+            "value": "1"
+          },
+          "Input_Data_Width": {
+            "value": "8"
+          },
+          "Input_Depth": {
+            "value": "8192"
+          },
+          "Performance_Options": {
+            "value": "First_Word_Fall_Through"
+          }
+        }
+      },
+      "fifo_generator_13": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "ip_revision": "14",
+        "xci_name": "design_1_fifo_generator_1_20",
+        "xci_path": "ip\\design_1_fifo_generator_1_20\\design_1_fifo_generator_1_20.xci",
+        "inst_hier_path": "fifo_generator_13",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "Enable_Safety_Circuit": {
+            "value": "true"
+          },
+          "Fifo_Implementation": {
+            "value": "Independent_Clocks_Block_RAM"
+          },
+          "Full_Flags_Reset_Value": {
+            "value": "1"
+          },
+          "Input_Data_Width": {
+            "value": "8"
+          },
+          "Input_Depth": {
+            "value": "8192"
+          },
+          "Performance_Options": {
+            "value": "First_Word_Fall_Through"
+          }
+        }
+      },
+      "fifo_generator_14": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "ip_revision": "14",
+        "xci_name": "design_1_fifo_generator_1_21",
+        "xci_path": "ip\\design_1_fifo_generator_1_21\\design_1_fifo_generator_1_21.xci",
+        "inst_hier_path": "fifo_generator_14",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "Enable_Safety_Circuit": {
+            "value": "true"
+          },
+          "Fifo_Implementation": {
+            "value": "Independent_Clocks_Block_RAM"
+          },
+          "Full_Flags_Reset_Value": {
+            "value": "1"
+          },
+          "Input_Data_Width": {
+            "value": "8"
+          },
+          "Input_Depth": {
+            "value": "8192"
+          },
+          "Performance_Options": {
+            "value": "First_Word_Fall_Through"
+          }
+        }
+      },
+      "LTC2326_V2_0": {
+        "vlnv": "xilinx.com:module_ref:LTC2326_V2:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_LTC2326_V2_0_0",
+        "xci_path": "ip\\design_1_LTC2326_V2_0_0\\design_1_LTC2326_V2_0_0.xci",
+        "inst_hier_path": "LTC2326_V2_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "LTC2326_V2",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sysclk": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "12000000",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_sysclk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "dout": {
+            "direction": "I"
+          },
+          "busy": {
+            "direction": "I"
+          },
+          "cnv": {
+            "direction": "O"
+          },
+          "sck": {
+            "direction": "O"
+          },
+          "adc_sample": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "fifo_wr_en": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "LTC2326_V2_0_adc_sample": {
+        "ports": [
+          "LTC2326_V2_0/adc_sample",
+          "fifo_generator_1/din"
+        ]
+      },
+      "LTC2326_V2_0_cnv": {
+        "ports": [
+          "LTC2326_V2_0/cnv",
+          "cnv"
+        ]
+      },
+      "LTC2326_V2_0_fifo_wr_en": {
+        "ports": [
+          "LTC2326_V2_0/fifo_wr_en",
+          "fifo_generator_1/wr_en"
+        ]
+      },
+      "LTC2326_V2_0_sck": {
+        "ports": [
+          "LTC2326_V2_0/sck",
+          "sck"
+        ]
+      },
+      "busy_1": {
+        "ports": [
+          "busy",
+          "LTC2326_V2_0/busy"
+        ]
+      },
+      "cs_1": {
+        "ports": [
+          "cs",
+          "spi_slave_0/cs"
+        ]
+      },
+      "dout_1": {
+        "ports": [
+          "dout",
+          "LTC2326_V2_0/dout"
+        ]
+      },
+      "fifo_generator_0_dout": {
+        "ports": [
+          "fifo_generator_0/dout",
+          "spi_decoder_0/CH1"
+        ]
+      },
+      "fifo_generator_10_dout": {
+        "ports": [
+          "fifo_generator_10/dout",
+          "spi_decoder_0/CH11"
+        ]
+      },
+      "fifo_generator_11_dout": {
+        "ports": [
+          "fifo_generator_11/dout",
+          "spi_decoder_0/CH12"
+        ]
+      },
+      "fifo_generator_12_dout": {
+        "ports": [
+          "fifo_generator_12/dout",
+          "spi_decoder_0/CH13"
+        ]
+      },
+      "fifo_generator_13_dout": {
+        "ports": [
+          "fifo_generator_13/dout",
+          "spi_decoder_0/CH14"
+        ]
+      },
+      "fifo_generator_14_dout": {
+        "ports": [
+          "fifo_generator_14/dout",
+          "spi_decoder_0/CH15"
+        ]
+      },
+      "fifo_generator_1_dout": {
+        "ports": [
+          "fifo_generator_1/dout",
+          "spi_decoder_0/CH2"
+        ]
+      },
+      "fifo_generator_2_dout": {
+        "ports": [
+          "fifo_generator_2/dout",
+          "spi_decoder_0/CH3"
+        ]
+      },
+      "fifo_generator_3_dout": {
+        "ports": [
+          "fifo_generator_3/dout",
+          "spi_decoder_0/CH4"
+        ]
+      },
+      "fifo_generator_4_dout": {
+        "ports": [
+          "fifo_generator_4/dout",
+          "spi_decoder_0/CH5"
+        ]
+      },
+      "fifo_generator_5_dout": {
+        "ports": [
+          "fifo_generator_5/dout",
+          "spi_decoder_0/CH6"
+        ]
+      },
+      "fifo_generator_6_dout": {
+        "ports": [
+          "fifo_generator_6/dout",
+          "spi_decoder_0/CH7"
+        ]
+      },
+      "fifo_generator_7_dout": {
+        "ports": [
+          "fifo_generator_7/dout",
+          "spi_decoder_0/CH8"
+        ]
+      },
+      "fifo_generator_8_dout": {
+        "ports": [
+          "fifo_generator_8/dout",
+          "spi_decoder_0/CH9"
+        ]
+      },
+      "fifo_generator_9_dout": {
+        "ports": [
+          "fifo_generator_9/dout",
+          "spi_decoder_0/CH10"
+        ]
+      },
+      "mosi_1": {
+        "ports": [
+          "mosi",
+          "spi_slave_0/mosi"
+        ]
+      },
+      "sclk_1": {
+        "ports": [
+          "sclk",
+          "spi_slave_0/sclk",
+          "fifo_generator_0/rd_clk",
+          "fifo_generator_1/rd_clk",
+          "fifo_generator_6/rd_clk",
+          "fifo_generator_5/rd_clk",
+          "fifo_generator_4/rd_clk",
+          "fifo_generator_3/rd_clk",
+          "fifo_generator_2/rd_clk",
+          "fifo_generator_8/rd_clk",
+          "fifo_generator_7/rd_clk",
+          "fifo_generator_10/rd_clk",
+          "fifo_generator_9/rd_clk",
+          "fifo_generator_12/rd_clk",
+          "fifo_generator_13/rd_clk",
+          "fifo_generator_14/rd_clk",
+          "fifo_generator_11/rd_clk"
+        ]
+      },
+      "slice_0_D0": {
+        "ports": [
+          "slice_0/D0",
+          "fifo_generator_0/rd_en"
+        ]
+      },
+      "slice_0_D2": {
+        "ports": [
+          "slice_0/D1",
+          "fifo_generator_1/rd_en"
+        ]
+      },
+      "slice_0_D3": {
+        "ports": [
+          "slice_0/D2",
+          "fifo_generator_2/rd_en"
+        ]
+      },
+      "slice_0_D4": {
+        "ports": [
+          "slice_0/D3",
+          "fifo_generator_3/rd_en"
+        ]
+      },
+      "slice_0_D5": {
+        "ports": [
+          "slice_0/D4",
+          "fifo_generator_4/rd_en"
+        ]
+      },
+      "slice_0_D6": {
+        "ports": [
+          "slice_0/D5",
+          "fifo_generator_5/rd_en"
+        ]
+      },
+      "slice_0_D7": {
+        "ports": [
+          "slice_0/D6",
+          "fifo_generator_6/rd_en"
+        ]
+      },
+      "slice_0_D8": {
+        "ports": [
+          "slice_0/D7",
+          "fifo_generator_7/rd_en"
+        ]
+      },
+      "slice_0_D9": {
+        "ports": [
+          "slice_0/D8",
+          "fifo_generator_8/rd_en"
+        ]
+      },
+      "slice_0_D10": {
+        "ports": [
+          "slice_0/D9",
+          "fifo_generator_9/rd_en"
+        ]
+      },
+      "slice_0_D11": {
+        "ports": [
+          "slice_0/D10",
+          "fifo_generator_10/rd_en"
+        ]
+      },
+      "slice_0_D12": {
+        "ports": [
+          "slice_0/D11",
+          "fifo_generator_11/rd_en"
+        ]
+      },
+      "slice_0_D13": {
+        "ports": [
+          "slice_0/D12",
+          "fifo_generator_12/rd_en"
+        ]
+      },
+      "slice_0_D14": {
+        "ports": [
+          "slice_0/D13",
+          "fifo_generator_13/rd_en"
+        ]
+      },
+      "slice_0_D15": {
+        "ports": [
+          "slice_0/D14",
+          "fifo_generator_14/rd_en"
+        ]
+      },
+      "slice_1_D0": {
+        "ports": [
+          "slice_1/D0",
+          "fifo_generator_0/rst"
+        ]
+      },
+      "slice_1_D1": {
+        "ports": [
+          "slice_1/D1",
+          "fifo_generator_1/rst"
+        ]
+      },
+      "slice_1_D2": {
+        "ports": [
+          "slice_1/D2",
+          "fifo_generator_2/rst"
+        ]
+      },
+      "slice_1_D3": {
+        "ports": [
+          "slice_1/D3",
+          "fifo_generator_3/rst"
+        ]
+      },
+      "slice_1_D4": {
+        "ports": [
+          "slice_1/D4",
+          "fifo_generator_4/rst"
+        ]
+      },
+      "slice_1_D5": {
+        "ports": [
+          "slice_1/D5",
+          "fifo_generator_5/rst"
+        ]
+      },
+      "slice_1_D6": {
+        "ports": [
+          "slice_1/D6",
+          "fifo_generator_6/rst"
+        ]
+      },
+      "slice_1_D7": {
+        "ports": [
+          "slice_1/D7",
+          "fifo_generator_7/rst"
+        ]
+      },
+      "slice_1_D8": {
+        "ports": [
+          "slice_1/D8",
+          "fifo_generator_8/rst"
+        ]
+      },
+      "slice_1_D9": {
+        "ports": [
+          "slice_1/D9",
+          "fifo_generator_9/rst"
+        ]
+      },
+      "slice_1_D10": {
+        "ports": [
+          "slice_1/D10",
+          "fifo_generator_10/rst"
+        ]
+      },
+      "slice_1_D11": {
+        "ports": [
+          "slice_1/D11",
+          "fifo_generator_11/rst"
+        ]
+      },
+      "slice_1_D12": {
+        "ports": [
+          "slice_1/D12",
+          "fifo_generator_12/rst"
+        ]
+      },
+      "slice_1_D13": {
+        "ports": [
+          "slice_1/D13",
+          "fifo_generator_13/rst"
+        ]
+      },
+      "slice_1_D14": {
+        "ports": [
+          "slice_1/D14",
+          "fifo_generator_14/rst"
+        ]
+      },
+      "spi_decoder_0_CH_en": {
+        "ports": [
+          "spi_decoder_0/CH_en",
+          "slice_0/Din"
+        ]
+      },
+      "spi_decoder_0_CH_rst": {
+        "ports": [
+          "spi_decoder_0/CH_rst",
+          "slice_1/Din"
+        ]
+      },
+      "spi_decoder_0_tx": {
+        "ports": [
+          "spi_decoder_0/tx",
+          "spi_slave_0/tx"
+        ]
+      },
+      "spi_slave_0_byte_done": {
+        "ports": [
+          "spi_slave_0/byte_done",
+          "spi_decoder_0/byte_done"
+        ]
+      },
+      "spi_slave_0_miso": {
+        "ports": [
+          "spi_slave_0/miso",
+          "miso"
+        ]
+      },
+      "spi_slave_0_rx_shift": {
+        "ports": [
+          "spi_slave_0/rx_shift",
+          "spi_decoder_0/rx_shift"
+        ]
+      },
+      "sysclk_1": {
+        "ports": [
+          "sysclk",
+          "fifo_generator_0/wr_clk",
+          "fifo_generator_1/wr_clk",
+          "fifo_generator_8/wr_clk",
+          "fifo_generator_7/wr_clk",
+          "fifo_generator_10/wr_clk",
+          "fifo_generator_9/wr_clk",
+          "fifo_generator_11/wr_clk",
+          "fifo_generator_12/wr_clk",
+          "fifo_generator_13/wr_clk",
+          "fifo_generator_14/wr_clk",
+          "fifo_generator_6/wr_clk",
+          "fifo_generator_5/wr_clk",
+          "fifo_generator_4/wr_clk",
+          "fifo_generator_3/wr_clk",
+          "fifo_generator_2/wr_clk",
+          "LTC2326_V2_0/sysclk"
+        ]
+      }
+    }
+  }
+}

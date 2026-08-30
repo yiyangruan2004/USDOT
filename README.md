@@ -4,6 +4,8 @@
 
 This repository contains the current prototype for an ultrasound-guided diffuse optical tomography (USDOT) acquisition system. It keeps the hardware capture path, bridge firmware, and operator interface together so that detector data can be traced from the ADC to the display.
 
+demo
+
 The data path is:
 
 ```text
